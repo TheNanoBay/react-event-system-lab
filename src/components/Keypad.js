@@ -1,17 +1,20 @@
-// Code Keypad Component Here
-import React, { Component } from 'react'
-
-export default class Keypad extends Component {
-
-    onFocus = () => console.log('Good!')
-
-    onBlur = () => console.log('Hey! Eyes on me!')
   
-    render() {
-      return (
-        <button onFocus={this.onFocus} onBlur={this.onBlur}>
-          Eyes on me, please!
-        </button>
-      )
-    }
+import React from 'react';
+
+class Keypad extends React.Component {
+
+  handleInputPassword = () => console.log('Entering password...')
+
+  render() {
+    return (
+      <div>
+        <input 
+          type="password"
+          onKeyUp={this.handleInputPassword} 
+        />
+      </div>
+    )
+  }
 }
+
+export default Keypad;
